@@ -1,0 +1,6 @@
+{
+  "name": "Café Vittoria",
+  "description": "Moderne, meertalige WhatsApp-order landingpage voor Café Vittoria in Rabat (Rue Beyrouth) - Gaufres, Tacos, Thés en Koffie.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

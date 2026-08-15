@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="waffleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAA639"/>
+      <stop offset="50%" stop-color="#C6801E"/>
+      <stop offset="100%" stop-color="#8C500C"/>
+    </linearGradient>
+    <linearGradient id="choco" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D1E12"/>
+      <stop offset="100%" stop-color="#1A0B05"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark Wood Plate -->
+  <ellipse cx="200" cy="180" rx="170" ry="90" fill="#2B1810" stroke="#3D2318" stroke-width="8"/>
+  <ellipse cx="200" cy="180" rx="150" ry="75" fill="#21120B"/>
+  
+  <!-- Belgian Waffle Shape -->
+  <rect x="80" y="100" width="240" height="130" rx="20" fill="url(#waffleGold)" stroke="#663A08" stroke-width="6"/>
+  
+  <!-- Waffle Grid Pockets -->
+  <g fill="#8C500C" opacity="0.8">
+    <rect x="105" y="120" width="35" height="25" rx="4"/>
+    <rect x="155" y="120" width="35" height="25" rx="4"/>
+    <rect x="205" y="120" width="35" height="25" rx="4"/>
+    <rect x="255" y="120" width="35" height="25" rx="4"/>
+    
+    <rect x="105" y="155" width="35" height="25" rx="4"/>
+    <rect x="155" y="155" width="35" height="25" rx="4"/>
+    <rect x="205" y="155" width="35" height="25" rx="4"/>
+    <rect x="255" y="155" width="35" height="25" rx="4"/>
+
+    <rect x="105" y="190" width="35" height="25" rx="4"/>
+    <rect x="155" y="190" width="35" height="25" rx="4"/>
+    <rect x="205" y="190" width="35" height="25" rx="4"/>
+    <rect x="255" y="190" width="35" height="25" rx="4"/>
+  </g>
+  
+  <!-- Chocolate Drizzle -->
+  <path d="M 90 120 Q 130 180 170 130 T 250 170 T 310 140" fill="none" stroke="url(#choco)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 110 160 Q 160 210 210 160 T 290 190" fill="none" stroke="url(#choco)" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Strawberries / Berries -->
+  <circle cx="150" cy="115" r="14" fill="#D93838"/>
+  <circle cx="240" cy="125" r="12" fill="#D93838"/>
+  <circle cx="195" cy="105" r="10" fill="#4B122F"/>
+</svg>

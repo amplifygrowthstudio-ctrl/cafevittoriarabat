@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-walnut-dark: #1C0F08;
+    --color-walnut: #2B1810;
+    --color-walnut-light: #3D2318;
+    --color-amber-gold: #D4952A;
+    --color-amber-hover: #E8A83A;
+    --color-cream: #F5EBD8;
+    --color-cream-muted: #D3C3AD;
+    --color-forest: #2D4D35;
+    --color-forest-dark: #1E3624;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #21120B;
+    color: #F5EBD8;
+    overflow-x: hidden;
+  }
+
+  html[dir="rtl"] body {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+html[dir="rtl"] .font-display {
+  font-family: 'Cairo', serif;
+  font-weight: 800;
+}
+
+/* Warm dark walnut background textures for authentic café atmosphere */
+.bg-wood-pattern {
+  background-color: #21120B;
+}
+
+.bg-wood-dark {
+  background-color: #1C0F08;
+}
+
+.bg-cream-card {
+  background-color: #FBF7EF;
+  color: #2B1810;
+}
+
+/* Custom scrollbar for menu navigation */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1C0F08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3D2318;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4952A;
+}
+
+/* Subtle Hero Animations & Ken Burns Effect */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-bounce {
+  animation: floatBounce 2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 1;
+  }
+  22% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-shine-sweep {
+  animation: shineSweep 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* SVG Line-Art Stroke Drawing & Steam Loop Animations */
+@keyframes drawWaffle {
+  0% {
+    stroke-dasharray: 260;
+    stroke-dashoffset: 260;
+  }
+  30% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawTaco {
+  0%, 25% {
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+  }
+  65% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawSteam {
+  0%, 55% {
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes steamLoop {
+  0%, 100% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-3.5px) scaleX(1.08);
+    opacity: 1;
+  }
+}
+
+.animate-draw-waffle path,
+.animate-draw-waffle rect {
+  animation: drawWaffle 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-draw-taco path {
+  animation: drawTaco 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-draw-steam path {
+  animation: drawSteam 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-steam-loop {
+  animation: steamLoop 2.8s ease-in-out 1.8s infinite;
+  transform-origin: center bottom;
+}
+
+/* Bestseller Card Border Glow Pulse Animation */
+@keyframes borderGlowPulse {
+  0%, 100% {
+    border-color: rgba(212, 149, 42, 0.45);
+    box-shadow: 0 0 12px rgba(212, 149, 42, 0.15);
+  }
+  50% {
+    border-color: rgba(212, 149, 42, 0.9);
+    box-shadow: 0 0 22px rgba(212, 149, 42, 0.35);
+  }
+}
+
+.animate-border-glow {
+  animation: borderGlowPulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-float-bounce,
+  .animate-shine-sweep,
+  .animate-steam-loop,
+  .animate-border-glow {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .animate-draw-waffle path,
+  .animate-draw-waffle rect,
+  .animate-draw-taco path,
+  .animate-draw-steam path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

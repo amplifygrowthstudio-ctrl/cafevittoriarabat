@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tortilla" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D199"/>
+      <stop offset="60%" stop-color="#D9A76A"/>
+      <stop offset="100%" stop-color="#B87E3A"/>
+    </linearGradient>
+    <linearGradient id="cheese" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFC837"/>
+      <stop offset="100%" stop-color="#FF8008"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rustic tray -->
+  <rect x="30" y="50" width="340" height="200" rx="20" fill="#2B1810" stroke="#3D2318" stroke-width="6"/>
+  <!-- French Toast Tacos Folded -->
+  <path d="M 60 210 Q 120 70 240 80 Q 330 90 340 210 Z" fill="url(#tortilla)" stroke="#9E611E" stroke-width="6"/>
+  
+  <!-- Grill marks -->
+  <line x1="120" y1="180" x2="180" y2="100" stroke="#7A420B" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <line x1="160" y1="190" x2="220" y2="110" stroke="#7A420B" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <line x1="200" y1="200" x2="260" y2="120" stroke="#7A420B" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Melted cheese sauce & fillings popping out -->
+  <path d="M 80 200 C 120 180, 160 220, 220 190 C 270 210, 310 180, 330 205 Z" fill="url(#cheese)"/>
+  
+  <!-- Chicken Nuggets & Fries peeking out -->
+  <rect x="130" y="160" width="18" height="40" rx="4" fill="#E59B29" transform="rotate(-15 130 160)"/>
+  <rect x="150" y="155" width="16" height="45" rx="4" fill="#F3B339" transform="rotate(10 150 155)"/>
+  <rect x="170" y="165" width="18" height="38" rx="4" fill="#E59B29" transform="rotate(-5 170 165)"/>
+  
+  <!-- Sauce drip -->
+  <circle cx="100" cy="215" r="8" fill="#D93838"/>
+  <circle cx="280" cy="210" r="10" fill="#FFC837"/>
+</svg>
